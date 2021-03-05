@@ -1,0 +1,55 @@
+<div class="container">
+    <p>
+        If you want to contact me for any business or collaboration issue. 
+        Or do you just want to tell me that you have loved my images, 
+        I will be happy to hear from you.
+    </p>
+</div>
+
+<div class="container">
+    <form (ngSubmit)="submit(formDirective)" [formGroup]="form" #formDirective="ngForm">
+               
+        <mat-form-field appearance="fill" class="sub-container">
+            <mat-label>First Name</mat-label>
+            <input type="text" matInput formControlName="name" placeholder="Enter your first name">
+            <mat-error *ngIf="name.hasError('required')">
+                Your first name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="sub-container">
+            <mat-label>Last Name</mat-label>
+            <input type="text" matInput formControlName="lastName" placeholder="Enter your last name">
+            <mat-error *ngIf="lastName.hasError('required')">
+                Your last name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="sub-container">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput formControlName="email" placeholder="pat@example.com">
+            <mat-error *ngIf="email.hasError('required')">
+                Your email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="sub-container">
+            <mat-label>Telephone number</mat-label>
+            <input type="text" matInput formControlName="telephoneNumber" placeholder="(+34) 678 678 678">
+            <mat-error *ngIf="telephoneNumber.hasError('required')">
+                Your telephone number is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+            
+
+        <mat-form-field appearance="fill" class="sub-container">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" placeholder="Tell me something :)"></textarea>
+            <mat-error *ngIf="message.hasError('required')">
+                Your message is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" [disabled]="form.invalid" class="sub-container-button">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+h1 {
+    font-size: 80px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.text {
+    color: white;
+    padding: 20px;
+}
