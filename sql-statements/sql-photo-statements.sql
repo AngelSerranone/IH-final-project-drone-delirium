@@ -1,13 +1,13 @@
-DROP SCHEMA IF EXISTS contact;
-CREATE SCHEMA contact;
-USE contact;
+DROP SCHEMA IF EXISTS photo;
+CREATE SCHEMA photo;
+USE photo;
 
-create table contact (
-	id int not null auto_increment,
-    name varchar(255),
-    last_name varchar(255),
-    telephone_number varchar(255),
-    email varchar(255),
-    message varchar(255),
-    primary key(id)
+create table photo (
+	photo_id int not null auto_increment,
+    photo_url varchar(255),
+    photo_comment varchar(1024),
+    primary key(photo_id)
+); primary key(id)
 );
+
+insert into 
