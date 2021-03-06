@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
     // Initialize formControl
     this.name = new FormControl ('', [Validators.required]);
     this.lastName = new FormControl ('', [Validators.required]);
-    this.telephoneNumber = new FormControl ('', [Validators.required]);
+    this.telephoneNumber = new FormControl ('', []);
     this.email = new FormControl ('', [Validators.required]);
     this.message = new FormControl ('', [Validators.required]);
 
@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
   }
 
   submit(formDirective: FormGroupDirective): void {
-    
+
   }
 
 }
