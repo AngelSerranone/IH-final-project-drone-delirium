@@ -14,7 +14,7 @@ export class PhotoService {
   // Methods
 
   getAllPhotos(): Observable<PhotoDB[]> {
-    return this.http.get<PhotoDB[]>('http://localhost:8081/photo');
+    return this.http.get<PhotoDB[]>('http://localhost:8081/photos');
   }
 
   

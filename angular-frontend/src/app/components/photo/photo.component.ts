@@ -9,20 +9,35 @@ import { PhotoDB, PhotoService } from 'src/app/services/photo.service';
 })
 export class PhotoComponent implements OnInit {
 
-  photoList: PhotoDB[] = [];
+  photoDB: PhotoDB[] = [];
+  photoList: Photo[] = [];
+
 
   constructor(
     private photoService: PhotoService
   ) { }
 
   ngOnInit(): void {
+    this.getPhotos()
   }
 
   /** Get all photos **/
   getPhotos(): void {
     this.photoService.getAllPhotos().subscribe(result =>{
-      this.photoList=result;
+      this.photoDB=result;
     });
+    this.setPhotos(this.photoDB);
+  }
+
+  /** Set all url photos **/
+  setPhotos(photoDB: PhotoDB[]): void {
+    for (let element of this.photoDB) {
+      this.photoList.push(new Photo(
+        element.photoId,
+        '../../../assets/images/square' + element.photoUrl,
+        element.photoComment
+      ));
+    }
   }
   
 
