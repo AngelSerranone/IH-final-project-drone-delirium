@@ -19,3 +19,16 @@ img {
     color: white;
     padding: 20px;
 }
+
+.photo-grid {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}ç
+
+.photo {
+    width: 300px;
+}

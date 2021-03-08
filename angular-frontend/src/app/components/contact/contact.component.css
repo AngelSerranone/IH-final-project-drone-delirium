@@ -6,27 +6,29 @@
     margin: 0 auto;
 }
 
-.container p {
+.contact {
     padding: 30px;
-    margin-top: 40px;
-    text-justify: distribute;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.6;
     color: white;
-    font-size: 16px;
-    width: 87%;
+    font-size: 18px;
+    width: 100%;
     background-color: rgba(255,255,255,.1);
     border-radius: 5px;
-
 }
 
 .sub-container{
     width: 100%;
-    padding-top: 5px;
+    font-size: 18px;
+    margin-top: 8px;
     color: white;
 }
 
 .sub-container-button{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-bottom: 50px;
-   
 }

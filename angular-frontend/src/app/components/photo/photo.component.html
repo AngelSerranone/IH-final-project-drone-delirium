@@ -1,4 +1,4 @@
-<img src="../../../assets/images/pano/pano1.jpg" alt="">
+<img src="/assets/images/pano/pano1.jpg" alt="">
 <div class="container">
     <div class="text">
         <h1>
@@ -12,8 +12,11 @@
     </div>
 </div>
 
-<div>
+<div class="photo-grid">
     <div *ngFor="let photo of photoList">
-        <img src={{photo.photoUrl}} alt="">
+        <div class="photo">
+            <img src="/assets/images/square/{{photo.photoUrl}}" alt="">
+        </div>
     </div>
 </div>
+ 

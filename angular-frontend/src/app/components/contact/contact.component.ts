@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { Contact } from 'src/app/models/contact';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +18,9 @@ export class ContactComponent implements OnInit {
   email: FormControl;
   message: FormControl;
 
-  constructor() {
+  constructor(
+    private contactService: ContactService
+  ) {
     
     // Initialize formControl
     this.name = new FormControl ('', [Validators.required]);
@@ -40,6 +44,19 @@ export class ContactComponent implements OnInit {
 
   submit(formDirective: FormGroupDirective): void {
 
+  }
+
+  /** Method to store contacts in database */
+  storeContact() : void {
+    let contact: Contact = new Contact(this.name.value, this.lastName.value, this.telephoneNumber.value, this.email.value, this.message.value);
+    this.contactService.storeContact(contact);
+    alert("message sent successfully");
+  }
+
+  storeContactEnter(event: KeyboardEvent): void {
+    if (event.key === "Enter") {
+      this.storeContact();
+    }
   }
 
 }
