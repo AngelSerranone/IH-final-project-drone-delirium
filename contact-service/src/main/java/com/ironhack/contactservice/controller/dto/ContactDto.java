@@ -16,7 +16,12 @@ public class ContactDto {
     @NotEmpty
     private String message;
 
+
+
     /** ------------ Constructors ------------ **/
+
+    public ContactDto() {
+    }
 
     public ContactDto(@NotEmpty String name, @NotEmpty String lastName, String telephoneNumber, @NotEmpty String email, @NotEmpty String message) {
         this.name = name;
@@ -66,5 +71,14 @@ public class ContactDto {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return "EmailBody [name=" + name +
+                ", lastName=" + lastName +
+                ", telephoneNumber=" + telephoneNumber +
+                ", email=" + email +
+                ", message=" + message + "]";
     }
 }

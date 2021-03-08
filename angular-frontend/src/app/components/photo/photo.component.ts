@@ -8,10 +8,8 @@ import { PhotoService } from 'src/app/services/photo.service';
   styleUrls: ['./photo.component.css']
 })
 export class PhotoComponent implements OnInit {
-
   
   photoList: Photo[] = [];
-
 
   constructor(
     private photoService: PhotoService

@@ -6,4 +6,6 @@ import com.ironhack.contactservice.model.Contact;
 public interface IContactController {
 
     Contact storeContact(ContactDto contactDto);
+
+    boolean sendEmail(ContactDto contactDto);
 }

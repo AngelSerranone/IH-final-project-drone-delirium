@@ -19,7 +19,12 @@ public class Contact {
     private String email;
     private String message;
 
+
+
     /** ------------ Constructors ------------ **/
+
+    public Contact() {
+    }
 
     public Contact(String name, String lastName, String telephoneNumber, String email, String message) {
         setName(name);

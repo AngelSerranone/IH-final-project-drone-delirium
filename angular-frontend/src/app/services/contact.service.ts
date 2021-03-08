@@ -17,6 +17,12 @@ export class ContactService {
     console.log('Stored contact'));
   }  
 
+  /** Method to ssend mail with contact info **/
+  sendMail(contact: Contact): void {
+    this.http.post('http://localhost:8083/send-mail', this.body(contact)).subscribe(data =>
+    console.log('Sent email'));
+  }
+
   body(contact: Contact): any{
     let contactBody: any = {
       name: contact.name,
@@ -27,6 +33,8 @@ export class ContactService {
     }
     return contactBody;
   }
+
+
 
 
 }
