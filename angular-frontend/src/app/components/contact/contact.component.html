@@ -8,7 +8,7 @@
     </div>
 
     
-    <form (ngSubmit)="submit(formDirective)" [formGroup]="form" #formDirective="ngForm">
+    <form (ngSubmit)="storeContact(formDirective)" [formGroup]="form" #formDirective="ngForm">
             
         <mat-form-field appearance="fill" class="sub-container">
             <mat-label>First Name *</mat-label>
@@ -47,7 +47,6 @@
             <mat-label>Telephone number</mat-label>
             <input type="text" matInput formControlName="telephoneNumber" placeholder="(+34) 678 678 678">
         </mat-form-field>
-            
     
         <mat-form-field appearance="fill" class="sub-container">
             <mat-label>Message *</mat-label>
@@ -57,7 +56,7 @@
             </mat-error>
         </mat-form-field>
     
-        <button mat-flat-button color="primary" [disabled]="form.invalid" (click)="storeContact()" (Keydown)="storeContactEnter($event)" class="sub-container-button">Submit</button>
+        <button mat-flat-button color="primary" [disabled]="form.invalid" class="sub-container-button">Submit</button>
     </form>
 </div>
 

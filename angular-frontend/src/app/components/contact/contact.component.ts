@@ -43,23 +43,13 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(formDirective: FormGroupDirective): void {
-
-  }
-
   /** Method to store contacts in database */
-  storeContact() : void {
+  storeContact(formDirective: FormGroupDirective) : void {
     let contact: Contact = new Contact(this.name.value, this.lastName.value, this.telephoneNumber.value, this.email.value, this.message.value);
     this.contactService.storeContact(contact);
     this.contactService.sendMail(contact);
+    this.form.reset();
+    formDirective.resetForm();
     alert("Message sent successfully :)");
   }
-
-
-  storeContactEnter(event: KeyboardEvent): void {
-    if (event.key === "Enter") {
-      this.storeContact();
-    }
-  }
-
 }
