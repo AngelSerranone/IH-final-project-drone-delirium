@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from 'src/app/models/video';
-import { VideoService } from 'src/app/services/video.service';
+import { EdgeService } from 'src/app/services/edge.service';
+
 
 @Component({
   selector: 'app-video',
@@ -12,7 +13,7 @@ export class VideoComponent implements OnInit {
   videoList: Video[] = [];
 
   constructor(
-    private videoService: VideoService
+    private edgeService: EdgeService
   ) { }
 
   ngOnInit(): void {
@@ -21,7 +22,7 @@ export class VideoComponent implements OnInit {
 
   /** Get all videos **/
   getVideos(): void {
-    this.videoService.getAllVideos().subscribe(result =>{
+    this.edgeService.getAllVideos().subscribe(result =>{
       this.videoList=result;
       console.log(result);
     });

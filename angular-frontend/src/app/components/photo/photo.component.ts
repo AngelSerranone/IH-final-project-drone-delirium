@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from 'src/app/models/photo';
-import { PhotoService } from 'src/app/services/photo.service';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
+import { EdgeService } from 'src/app/services/edge.service';
 
 
 
@@ -16,7 +16,7 @@ export class PhotoComponent implements OnInit {
   photoList: Photo[] = [];
 
   constructor(
-    private photoService: PhotoService,
+    private edgeService: EdgeService,
     public dialog: MatDialog
   ) {}
 
@@ -26,7 +26,7 @@ export class PhotoComponent implements OnInit {
 
   /** Get all photos **/
   getPhotos(): void {
-    this.photoService.getAllPhotos().subscribe(result =>{
+    this.edgeService.getAllPhotos().subscribe(result =>{
       this.photoList=result;
     });
   }
