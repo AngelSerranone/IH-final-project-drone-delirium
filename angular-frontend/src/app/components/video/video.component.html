@@ -1,10 +1,34 @@
-<div *ngFor="let video of videoList">
+
+<div class="video-grid">
     <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{video.videoUrl}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1>Don't try to tell them, show them</h1>
     </div>
+
+    <youtube-player 
+        videoId="w3w8TGDNmWs" 
+        suggestedQuality="highres" 
+        [height]="500" 
+        [width]="1200" 
+        [startSeconds]="0"
+        [endSeconds]="65">
+        
+    </youtube-player>
     
 </div>
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/d99S9tLFlrI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nuen_bAoimc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sbDwmPqCHfQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+<div class="sub-video-grid">
+    <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/d99S9tLFlrI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/nuen_bAoimc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/sbDwmPqCHfQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<youtube-player 
+  videoId="w3w8TGDNmWs" 
+  suggestedQuality="highres" 
+  [height]="250" 
+  [width]="500" 
+  [startSeconds]="0"
+  [endSeconds]="9">
+  [showBeforeIframeApiLoads]=true
+</youtube-player>

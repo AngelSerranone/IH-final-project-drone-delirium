@@ -6,6 +6,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 
 
@@ -15,13 +17,19 @@ import { PhotoComponent } from './components/photo/photo.component';
 import { VideoComponent } from './components/video/video.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotoComponent,
     VideoComponent,
-    ContactComponent
+    ContactComponent,
+    AboutMeComponent,
+    DialogComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

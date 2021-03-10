@@ -1,0 +1,47 @@
+
+
+.principal-video {
+    width:87%;
+    height:95vh;
+    transition-duration: 0.4s;
+}
+
+
+
+.video-grid {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+h1 {
+    width:87%;
+    font-size: 60px;
+    color: white;
+    padding: 20px;
+}
+
+.sub-video-grid {
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.video {
+    width: 30%;
+    height:300px;
+    margin-top: 20px;
+    transition-duration: 0.4s;
+}
+
+.video:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 30px black;
+    
+}

@@ -39,10 +39,6 @@ public class ContactService implements IContactService {
     /** Method to send email when form is submitted **/
     public boolean sendEmail(ContactDto contactDto) {
         LOGGER.info("EmailBody: {}", contactDto.toString());
-//        String text = contactDto.getName() + " " + contactDto.getLastName() + "\n" +
-//                contactDto.getEmail() + "\n" +
-//                contactDto.getTelephoneNumber() + "\n" +
-//                contactDto.getMessage();
         return sendEmailTool(contactDto.getName(), contactDto.getLastName(), contactDto.getEmail(), contactDto.getTelephoneNumber(), contactDto.getMessage());
     }
 

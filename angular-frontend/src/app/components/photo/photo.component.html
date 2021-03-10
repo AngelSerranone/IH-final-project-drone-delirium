@@ -1,22 +1,28 @@
-<img src="/assets/images/pano/pano1.jpg" alt="">
 <div class="container">
-    <div class="text">
-        <h1>
-            THE WORLD
-        </h1>
-    </div>
-    <div class="text">
-        <h1>
-            FROM ANOTHER PERSPECTIVE
-        </h1>
+    <div class="message">
+        <h1>The world, from another perspective</h1>
     </div>
 </div>
 
-<div class="photo-grid">
-    <div *ngFor="let photo of photoList">
-        <div class="photo">
-            <img src="/assets/images/square/{{photo.photoUrl}}" alt="">
+<div class="container">
+    <img class="welcome" src="/assets/images/pano/pano3.jpg" alt="">
+</div>
+    
+<div class="container">
+    <div class="photo-grid">
+        <div class="text">
+            <h1>
+                Gallery
+            </h1>
+        </div>
+        <div *ngFor="let photo of photoList">
+            <div class="photo">
+                <img mat-button (click)="openDialog(photo)" src="/assets/images/square/{{photo.photoUrl}}" alt="">
+            </div>
         </div>
     </div>
 </div>
+
+
+
  
