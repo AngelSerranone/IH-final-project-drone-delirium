@@ -23,13 +23,14 @@ public class ContactController implements IContactController {
     @Autowired
     private IContactService contactService;
 
-
+    /** Store contacts in database **/
     @PostMapping("/add-contact")
     @ResponseStatus(HttpStatus.CREATED)
     public Contact storeContact(@RequestBody @Valid ContactDto contactDto) {
         return contactService.storeContact(contactDto);
     }
 
+    /** Send email with contact information **/
     @PostMapping("/send-mail")
     @ResponseStatus(HttpStatus.CREATED)
     public boolean sendEmail(@RequestBody @Valid ContactDto contactDto) {

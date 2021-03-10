@@ -19,6 +19,8 @@ export class ContactComponent implements OnInit {
   email: FormControl;
   message: FormControl;
 
+  checked = false;
+
   constructor(
     private contactService: ContactService
   ) {

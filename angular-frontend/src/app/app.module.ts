@@ -7,7 +7,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
-import { YouTubePlayerModule } from "@angular/youtube-player";
+
+
 
 
 
@@ -43,7 +44,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatCheckboxModule,
     MatButtonModule,
     MatDialogModule,
-    YouTubePlayerModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

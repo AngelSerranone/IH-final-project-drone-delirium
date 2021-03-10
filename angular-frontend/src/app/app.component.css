@@ -29,6 +29,11 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
+    font-weight: 500;
+}
+
+mat-tab-label {
+    font-size: 36px;
 }
 
 

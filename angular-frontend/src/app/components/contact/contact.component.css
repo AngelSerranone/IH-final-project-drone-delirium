@@ -1,34 +1,43 @@
 .container {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 30%;
-    margin: 0 auto;
+    width: 100%;
+    
+}
+
+.hola {
+    max-width: 700px;
+    margin: 0 20px;
 }
 
 .contact {
-    padding: 30px;
     margin-top: 60px;
     margin-bottom: 40px;
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.6;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     width: 100%;
     background-color: rgba(255,255,255,.1);
     border-radius: 5px;
 }
 
+.contact p {
+    padding: 30px;
+}
+
 .sub-container{
     width: 100%;
     font-size: 18px;
-    margin-top: 8px;
+    margin-top: 5px;
     color: white;
 }
 
 .sub-container-button{
     width: 100%;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-bottom: 50px;
 }

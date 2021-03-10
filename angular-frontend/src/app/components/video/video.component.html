@@ -1,34 +1,27 @@
-
-<div class="video-grid">
-    <div>
-        <h1>Don't try to tell them, show them</h1>
-    </div>
-
-    <youtube-player 
-        videoId="w3w8TGDNmWs" 
-        suggestedQuality="highres" 
-        [height]="500" 
-        [width]="1200" 
-        [startSeconds]="0"
-        [endSeconds]="65">
+<div class="container">
+    <div class="hola">
+        <div >
+            <h1 class="message">Don't try to tell it, better <span style="color: #c2185b;"> show </span>it</h1>
+        </div>
+    
+        <iframe class="principal-video" loading="lazy" src="https://www.youtube.com/embed/w3w8TGDNmWs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
-    </youtube-player>
+        <div >
+            <h1 class="message">Need <span style="color: #c2185b;"> more? </span>You're in luck</h1>
+        </div>
+    
+    
+   
+        <div class="video-grid">
+            <div class="content">
+                <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/d99S9tLFlrI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/nuen_bAoimc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/sbDwmPqCHfQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>    
+        
+    </div>
     
 </div>
 
 
-<div class="sub-video-grid">
-    <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/d99S9tLFlrI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/nuen_bAoimc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe class="video" loading="lazy" src="https://www.youtube.com/embed/sbDwmPqCHfQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<youtube-player 
-  videoId="w3w8TGDNmWs" 
-  suggestedQuality="highres" 
-  [height]="250" 
-  [width]="500" 
-  [startSeconds]="0"
-  [endSeconds]="9">
-  [showBeforeIframeApiLoads]=true
-</youtube-player>
