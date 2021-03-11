@@ -20,6 +20,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { LegalDialogComponent } from './components/legal-dialog/legal-dialog.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     ContactComponent,
     AboutMeComponent,
     DialogComponent,
+    LegalDialogComponent,
    
   ],
   imports: [

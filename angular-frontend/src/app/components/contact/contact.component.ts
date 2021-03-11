@@ -3,6 +3,8 @@ import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular
 import { Contact } from 'src/app/models/contact';
 import { EdgeService } from 'src/app/services/edge.service';
 import { CustomValidators } from 'src/app/utils/custom-validators';
+import {MatDialog} from '@angular/material/dialog';
+import { LegalDialogComponent } from '../legal-dialog/legal-dialog.component';
 
 @Component({
   selector: 'app-contact',
@@ -18,11 +20,13 @@ export class ContactComponent implements OnInit {
   telephoneNumber: FormControl;
   email: FormControl;
   message: FormControl;
+  legal: FormControl;
 
   checked = false;
 
   constructor(
-    private edgeService: EdgeService
+    private edgeService: EdgeService,
+    public dialog: MatDialog
   ) {
     
     // Initialize formControl
@@ -31,6 +35,7 @@ export class ContactComponent implements OnInit {
     this.telephoneNumber = new FormControl ('', []);
     this.email = new FormControl ('', [Validators.required, CustomValidators.emailValidator]);
     this.message = new FormControl ('', [Validators.required]);
+    this.legal = new FormControl(false, [Validators.required]);
 
     // Initialize formGroup
     this.form = new FormGroup({
@@ -39,6 +44,7 @@ export class ContactComponent implements OnInit {
       telephoneNumber: this.telephoneNumber,
       email: this.email,
       message: this.message,
+      legal: this.legal
     });
    }
 
@@ -54,4 +60,15 @@ export class ContactComponent implements OnInit {
     formDirective.resetForm();
     alert("Message sent successfully :)");
   }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(LegalDialogComponent, {
+      width:'1500px',
+    });
+  }
+
+  
+
+
+
 }
