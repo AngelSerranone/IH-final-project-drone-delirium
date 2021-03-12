@@ -17,7 +17,7 @@
         </div>
         <div *ngFor="let photo of photoList">
             <div class="photo">
-                <img mat-button (click)="openDialog(photo)" src="/assets/images/square/{{photo.photoUrl}}" alt="">
+                <img mat-button (click)="openDialog(photo)" src="/assets/images/square/{{photo.photoUrl}}" alt="{{photo.photoComment}}">
             </div>
         </div>
     </div>

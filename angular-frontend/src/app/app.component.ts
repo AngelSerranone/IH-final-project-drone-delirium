@@ -10,10 +10,9 @@ export class AppComponent {
 
   isSticky: boolean = false;
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    this.isSticky = window.pageYOffset >= 250;
-  }
+ 
+
+
 
 
 }

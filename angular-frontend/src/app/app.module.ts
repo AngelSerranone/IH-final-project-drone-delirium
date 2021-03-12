@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { LegalDialogComponent } from './components/legal-dialog/legal-dialog.component';
+import { ServiceComponent } from './components/service/service.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { LegalDialogComponent } from './components/legal-dialog/legal-dialog.com
     AboutMeComponent,
     DialogComponent,
     LegalDialogComponent,
+    ServiceComponent,
    
   ],
   imports: [

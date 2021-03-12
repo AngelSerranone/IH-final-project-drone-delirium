@@ -9,17 +9,17 @@
     text-align: center;
     font-size: 60px;
     color: white;
-    line-height: 1.6;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    line-height: 1.2;
+    margin-top: 35px;
+    margin-bottom: 45px;
     
 }
 
 .video {
-    width: 30%;
-    height:300px;
-    margin-top: 0px;
+    width: 450px;
+    height: 253px;
     transition-duration: 0.4s;
+    margin-bottom: 30px;
 }
 
 .video:hover{
@@ -44,6 +44,36 @@
 
 .video-grid {
     display: flex;
-    justify-content: space-around;
-    
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+iframe:not(.principal-video) {
+    width: 100%;
+    height: 100%;
+}
+
+@Media screen and (max-width:1665px) {
+    .video-grid {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video {
+        margin: 0 15px;
+    }
+
+}
+
+@Media screen and (min-width:1665px) {
+    .video-grid {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@Media screen and (max-width:501px) {
+    .video {
+        margin: 0px;
+    }
 }
