@@ -101,7 +101,7 @@ In order to use the application, you must:
    ng serve
    ```
 
-7. Enjoy it!
+7. Go to http://localhost:4200/home and enjoy it!
 
 ## THANKS
 
