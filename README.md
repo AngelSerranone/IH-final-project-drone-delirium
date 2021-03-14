@@ -57,7 +57,7 @@ In order to use the application, you must:
 
    ```typescript
    // first
-   npm -i
+   npm i
    // and then
    ng serve
    ```
