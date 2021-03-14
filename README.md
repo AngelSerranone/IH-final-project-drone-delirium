@@ -45,15 +45,54 @@ In order to use the application, you must:
 
 2. Create the 3 databases, executing the files found in the sql-statemetns folder
 
-3. Go to the configuration server repository (https://github.com/AngelSerranone/IHFP-config-server-repo), download the files, and change the application properties of each microservice to the desired ones (username, password ...).
+3. Go to the configuration server repository (https://github.com/AngelSerranone/IHFP-config-server-repo), and download the files. In each microservice (photo, video and contact), change the username and password in the aplication.properties for your MySql  credentials.
 
-4. Run all microservices, in this order: eureka server, configuration-server, and the rest of microservices, with
+   ```pro
+   spring.datasource.username=USERNAME
+   spring.datasource.password=PASSWORD
+   ```
+
+4. In order to receive emails in your gmail account, go to the contact-service.properties of the config server repository, and change the email account and password
+
+   ```PR
+   spring.mail.username=EMAIL@ACCOUNT.COM #write your self email account
+   spring.mail.password=PASSWORD #create your application password (in your gmail account), and put there
+   ```
+
+   Then, in the contact-service/service/impl/ContactService --> change the email and put yours.
+
+   ```java
+   private boolean sendEmailTool(String name, String lastName,String email, String telephoneNumber, String body) {
+           boolean send = false;
+           String text = "name: " + name + "<br/>" +
+                   "Last Name: " + lastName + "<br/>" +
+                   "Email: " + email + "<br/>" +
+                   "Telephone number: " + telephoneNumber + "<br/>" +
+                   "Message: " + body;
+           MimeMessage message = sender.createMimeMessage();
+           MimeMessageHelper helper = new MimeMessageHelper(message);
+           try {
+               helper.setTo("YOURMAIL@gmail.com"); // WRITE YOUR OWN MAIL
+               helper.setText(text, true);
+               helper.setSubject("New Contact from Drone-Delirium App :)");
+               sender.send(message);
+               send = true;
+               LOGGER.info("Sent mail!");
+           } catch (MessagingException e) {
+               LOGGER.error("There was an error: {}", e);
+           }
+           return send;
+   ```
+
+   now you will receive an email every time someone fills in the contact form.
+
+5. Run all microservices, in this order: eureka server, configuration-server, and the rest of microservices, with
 
    ```
    mvn spring-boot:run
    ```
 
-5. Open the angular project and run
+6. Open the angular project and run
 
    ```typescript
    // first
@@ -62,7 +101,7 @@ In order to use the application, you must:
    ng serve
    ```
 
-6. Enjoy it!
+7. Enjoy it!
 
 ## THANKS
 

@@ -52,7 +52,7 @@ public class ContactService implements IContactService {
         MimeMessage message = sender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
         try {
-            helper.setTo("dronedelirium.info@gmail.com");
+            helper.setTo("YOURMAIL@gmail.com");
             helper.setText(text, true);
             helper.setSubject("New Contact from Drone-Delirium App :)");
             sender.send(message);
