@@ -5,13 +5,16 @@
     color: white;
 }
 
+.carousel {
+    width: 100%;
+}
+
 .message {
     width: 100%;
     color: white;
-    margin: 35px 0 20px 0;
+    margin: 35px 0 30px 0;
     text-align: center;
-    line-height: 1.6;
-   
+    line-height: 1.2;
 }
 
 .welcome {
@@ -33,7 +36,7 @@ img {
 .text {
     width: 100%;
     color: white;
-    margin: 20px 0 30px 0;
+    margin: 10px 0 20px 0;
     text-align: center;
 }
 
@@ -43,7 +46,7 @@ img {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    margin: 30px 0 70px 0;
+    margin: 30px 0 80px 0;
 }
 
 .photo {
@@ -60,3 +63,4 @@ img {
     box-shadow: 0px 0px 30px black;
     background-color: #c2185b;
 }
+

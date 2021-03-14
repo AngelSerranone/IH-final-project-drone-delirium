@@ -9,3 +9,10 @@ create table video (
     primary key(video_id)
 );
 
+insert into video (video_url, video_comment) values 
+("w3w8TGDNmWs", "any comment"),
+("d99S9tLFlrI", "any comment"),
+("nuen_bAoimc", "any comment"),
+("sbDwmPqCHfQ", "any comment")
+;
+

@@ -1,11 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    background-color: rgb(50, 53, 50);
+    /* background-color: rgb(50, 53, 50); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-image: url('assets/images/pano/pano1.jpg');
+    background-attachment: fixed;
 }
 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.pepe {
+    background-color: rgba(0,0,0,0.7);
+}

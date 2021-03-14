@@ -8,7 +8,7 @@ create table contact (
     last_name varchar(255),
     telephone_number varchar(255),
     email varchar(255),
-    message varchar(255),
+    message varchar(1024),
     primary key(id)
 );
 

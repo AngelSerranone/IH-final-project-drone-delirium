@@ -1,6 +1,7 @@
 package com.ironhack.edgeservice.client;
 import com.ironhack.edgeservice.classes.Contact;
 import com.ironhack.edgeservice.dto.ContactDto;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import javax.validation.Valid;
 
 
 @FeignClient("contact-service")
+@LoadBalancerClient("contact-service")
 public interface ContactClient {
 
     /** Store contacts in database **/

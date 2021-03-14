@@ -7,10 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
-
-
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { LegalDialogComponent } from './components/legal-dialog/legal-dialog.component';
-import { ServiceComponent } from './components/service/service.component';
+
 
 
 @NgModule({
@@ -33,7 +30,7 @@ import { ServiceComponent } from './components/service/service.component';
     AboutMeComponent,
     DialogComponent,
     LegalDialogComponent,
-    ServiceComponent,
+
    
   ],
   imports: [
@@ -48,6 +45,7 @@ import { ServiceComponent } from './components/service/service.component';
     MatCheckboxModule,
     MatButtonModule,
     MatDialogModule,
+    NgImageSliderModule
  
   ],
   providers: [],

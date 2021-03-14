@@ -1,13 +1,17 @@
+
+
+
 <div class="container">
     <div class="message">
         <h1>The <span style="color: #c2185b;"> world</span>, from another <span style="color: #c2185b;"> perspective</span></h1>
     </div>
 </div>
 
-<div class="container">
-    <img class="welcome" src="/assets/images/pano/pano3.jpg" alt="">
+
+<div class="carousel">
+    <ng-image-slider [images]="imageObject" #nav infinite="true" [animationSpeed]="animationSpeed" [imageSize]="imageSize" [autoSlide]="autoSlide" [manageImageRatio]="manageImageRatio"></ng-image-slider>
 </div>
-    
+   
 <div class="container">
     <div class="photo-grid">
         <div class="text">
@@ -15,14 +19,13 @@
                 Take a <span style="color: #c2185b;"> look</span> at my gallery
             </h1>
         </div>
-        <div *ngFor="let photo of photoList">
+        <div *ngFor="let photo of squareList">
             <div class="photo">
                 <img mat-button (click)="openDialog(photo)" src="/assets/images/square/{{photo.photoUrl}}" alt="{{photo.photoComment}}">
             </div>
         </div>
     </div>
 </div>
-
 
 
  

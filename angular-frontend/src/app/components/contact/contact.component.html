@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="hola">
+<div class="container-form">
+    <div class="hola-form">
 
         <div class="message">
             <h1>Do you have<span style="color: #c2185b;"> something </span>to tell?</h1>
@@ -63,13 +63,15 @@
             </mat-form-field>
 
             <div class="sub-container-legal">
-                <mat-checkbox class="sub-container-check" formControlName="legal" [(ngModel)]="checked">I Agree to </mat-checkbox>
-                <p class="sub-container-privacy" style="color: #1de9b6;" (click)="openDialog()">Privacy Policy</p>
-                
+                <div>
+                    <mat-checkbox class="sub-container-check" formControlName="legal" [(ngModel)]="checked">I Agree to </mat-checkbox>
+                    <p class="sub-container-privacy" style="color: #1de9b6;" (click)="openDialog()">Privacy Policy</p>
+                </div>
+                <mat-error *ngIf="checked === false && legal.touched" class="error">
+                    You have to <strong>accept</strong> the privacy policy
+                </mat-error>
             </div>
-            <mat-error *ngIf="checked === false && legal.touched" class="error">
-                You have to <strong>accept</strong> the privacy policy
-            </mat-error>
+            
         
             <button mat-flat-button color="primary" [disabled]="form.invalid || checked === false" class="sub-container-button">Submit</button>
         </form>

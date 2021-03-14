@@ -28,7 +28,7 @@
     
 }
 
-.container {
+.video-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@
     
 }
 
-.hola {
+.hola-video {
     width: 82%;
     margin: 0 20px;
 }

@@ -1,12 +1,13 @@
-.container {
+.container-form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 100px;
 }
 
-.hola {
+.hola-form {
     max-width: 700px;
     margin: 0 50px;
 }
@@ -20,7 +21,7 @@
     color: white;
     font-size: 20px;
     width: 100%;
-    background-color: rgba(255,255,255,.1);
+    background-color: rgb(50, 53, 50);
     border-radius: 5px;
 }
 
@@ -33,6 +34,7 @@
     font-size: 18px;
     margin-top: 5px;
     color: white;
+    
 }
 
 .sub-container-legal{
@@ -41,12 +43,22 @@
     justify-content: center;
     font-size: 18px;
     margin-top: 5px;
+    margin-bottom: 20px;
     color: white;
-    flex-direction: row;
+    flex-direction: column;
 }
 
+.sub-container-legal div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
 .sub-container-check{
-    width: 50%;
+    flex:1;
     font-size: 18px;
     justify-self: right;
     text-align: right;
@@ -56,20 +68,28 @@
 }
 
 .sub-container-privacy{
-    width: 50%;
+    flex:1;
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 5px!important;
     color: white;
     cursor: pointer;
+    
 }
+
+
 
 .sub-container-button{
     width: 100%;
-    margin-top: 18px;
-    margin-bottom: 100px;
+    margin: 45px 0 100px 0;
     font-size: 18px;
-    padding: 5px
+    padding: 5px;
 }
+
+.sub-container-button:disabled {
+    background-color: rgb(50, 53, 50)!important;
+}
+
+
 
 .error {
     text-align: center;
@@ -86,4 +106,14 @@
 .message h1 {
     font-size: 60px;
     line-height: 1.2;
+}
+
+
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgb(50, 53, 50); 
+}
+
+input {
+    background-color: rgb(50, 53, 50)!important; 
 }

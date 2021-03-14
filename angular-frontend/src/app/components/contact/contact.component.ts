@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { Contact } from 'src/app/models/contact';
 import { EdgeService } from 'src/app/services/edge.service';
@@ -9,7 +9,8 @@ import { LegalDialogComponent } from '../legal-dialog/legal-dialog.component';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements OnInit {
 

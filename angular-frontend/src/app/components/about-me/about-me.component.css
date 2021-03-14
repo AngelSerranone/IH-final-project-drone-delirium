@@ -1,4 +1,4 @@
-.container {
+.container-about {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,21 +6,21 @@
     width: 100%;
 }
 
-.hola {
+.hola-about {
     max-width: 1560px;
     margin: 0 50px;
 }
 
 .contact {
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.6;
     color: white;
     font-size: 18px;
     width: 100%;
-    background-color: rgba(255,255,255,.1);
+    background-color: rgb(50, 53, 50);
     border-radius: 5px;
 }
 
@@ -37,6 +37,8 @@
 
 .subcontainer img {
     width: 100%;
+    border-radius: 5px;
+    margin-bottom: -8px;
 }
 
 .message {

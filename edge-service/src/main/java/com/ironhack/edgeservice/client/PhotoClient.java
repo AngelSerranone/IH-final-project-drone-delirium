@@ -1,6 +1,7 @@
 package com.ironhack.edgeservice.client;
 
 import com.ironhack.edgeservice.classes.Photo;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 
 @FeignClient("photo-service")
+@LoadBalancerClient("photo-service")
 public interface PhotoClient {
 
     /** Get all photos from database **/
