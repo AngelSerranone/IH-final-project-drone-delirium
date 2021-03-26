@@ -18,9 +18,9 @@ My application has the following elements:
 
 - Angular front-end: also using angular material components. It allows the user to view my photos and videos, and they can contact me through a form, which, once the submit is done, stores their data in the database, and sends me an email with their contact information. This form includes a privacy policy that must be accepted.
 
-  ![](screenshots\captura1.png)
+  ![](screenshots/captura1.png)
 
-  ![](screenshots\captura2.png)
+  ![](screenshots/captura2.png)
 
 - 3 SQL databases tables:
 
